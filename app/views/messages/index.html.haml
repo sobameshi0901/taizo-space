@@ -1,9 +1,8 @@
 .notification
-  チャットグループが作成されました。
 .chat-side
   .chat-side__top
     .user-content
-      .user-content__name タイゾー
+      .user-content__name=current_user.name
       = link_to '/', class: 'user-content__link' do
         = fa_icon 'pencil-square-o', class: 'icon'
 

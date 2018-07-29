@@ -1,5 +1,15 @@
 @import "mixin/clearfix";
 
+.notification {
+  text-align: center;
+  color:white;
+  .notice {
+    background-color: $light-blue;
+  }
+  .alart {
+    background-color: $alert-orange;
+  }
+}
 
 .notification {
   width: 100%;
