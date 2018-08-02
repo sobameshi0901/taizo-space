@@ -1,24 +1,5 @@
 .notification
-.chat-side
-  .chat-side__top
-    .user-content
-      .user-content__name= current_user.name
-      = link_to new_group_path, class: 'user-content__link' do
-        = fa_icon 'pencil-square-o', class: 'icon'
-
-      = link_to edit_user_path(current_user), class: 'user-content__link' do
-        = fa_icon 'cog', class: 'icon'
-  .chat-side__bottom
-    .group-contents
-      .group-content
-        %p.group-content__name シューゾーの会
-        %p.group-content__text 解散！
-      .group-content
-        %p.group-content__name シューゾーの会
-        %p.group-content__text 解散！
-      .group-content
-        %p.group-content__name シューゾーの会
-        %p.group-content__text 解散！
+= render 'shared/side_bar'
 .chat-main
   .chat-main__header
     .group-info
