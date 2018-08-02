@@ -1,0 +1,52 @@
+.chat-side {
+  float: left;
+  width: 300px;
+  height: 100vh;
+
+  &__top {
+    height: 120px;
+    background-color: $dark-navy;
+    padding: 35px 20px 0 20px;
+    .user-content {
+      color: $white;
+      font-weight: bold;
+      &__name {
+        float: left;
+        font-size: 20px;
+        padding-right: 100px;
+      }
+      &__link {
+        text-decoration: none;
+        position: inline-block;
+        margin-left: 10px;
+        font-size: 18px;
+        &:visited {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    height: calc(100vh - 120px);
+    overflow: scroll;
+    background-color: $navy;
+    .group-contents {
+      .group-content {
+        color: $white;
+        padding: 0 20px;
+        &:hover {
+          background: #435162;
+        }
+        &__name {
+          font-size: 15px;
+          padding: 20px 0 5px 0;
+        }
+        &__text {
+          font-size: 11px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}

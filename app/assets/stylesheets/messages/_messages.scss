@@ -1,170 +1,20 @@
-@import "mixin/clearfix";
 
-.notification {
-  text-align: center;
-  color:white;
-  .notice {
-    background-color: $light-blue;
-  }
-  .alart {
-    background-color: $alert-orange;
-  }
-}
+// .notification {
+//   text-align: center;
+//   color:white;
+//   .notice {
+//     background-color: $light-blue;
+//   }
+//   .alart {
+//     background-color: $alert-orange;
+//   }
+// }
 
 
-.notification {
-  width: 100%;
-  text-align: center;
-  background-color: $light-blue;
-  color: $white;
-}
+// .notification {
+//   width: 100%;
+//   text-align: center;
+//   background-color: $light-blue;
+//   color: $white;
+// }
 
-.chat-side {
-  float: left;
-  width: 300px;
-  height: 100vh;
-
-  &__top {
-    height: 120px;
-    background-color: $dark-navy;
-    padding: 35px 20px 0 20px;
-    .user-content {
-      color: $white;
-      font-weight: bold;
-      &__name {
-        float: left;
-        font-size: 20px;
-        padding-right: 100px;
-      }
-      &__link {
-        text-decoration: none;
-        position: inline-block;
-        margin-left: 10px;
-        font-size: 18px;
-        &:visited {
-          color: $white;
-        }
-      }
-    }
-  }
-
-  &__bottom {
-    height: calc(100vh - 120px);
-    overflow: scroll;
-    background-color: $navy;
-    .group-contents {
-      .group-content {
-        color: $white;
-        padding: 0 20px;
-        &:hover {
-          background: #435162;
-        }
-        &__name {
-          font-size: 15px;
-          padding: 20px 0 5px 0;
-        }
-        &__text {
-          font-size: 11px;
-          padding-bottom: 20px;
-        }
-      }
-    }
-  }
-}
-
-.chat-main {
-  float: right;
-  width: calc(100vw - 300px);
-  height: 100vh;
-
-  &__header {
-    height: 120px;
-    background-color: $white;
-    border-bottom: 1px solid $light-grey;
-    padding: 0 40px;
-    .group-info {
-      &__detail {
-        float: left;
-        padding-top: 35px;
-        &__name {
-          font-size: 20px;
-          color: $black;
-        }
-        &__member {
-          font-size: 12px;
-          color: $dark-grey;
-        }
-      }
-      &__button {
-        float: right;
-        text-decoration: none;
-        margin-top: 28px;
-        padding: 0 20px;
-        line-height: 40px;
-        border: 1px solid $light-blue;
-        color:$light-blue;
-      }
-    }
-  }
-
-  &__body {
-    height: calc(100vh - 120px - 90px);
-    overflow: scroll;
-    background-color: $white;
-    padding: 0 40px;
-    .post {
-      padding-top: 40px;
-      &__detail {
-        @include clearfix();
-        &__user {
-          float: left;
-          font-size: 16px;
-          font-weight: bold;
-        }
-        &__time {
-          float: left;
-          padding-left: 10px;
-          font-size: 12px;
-          color: $dark-grey;
-        }
-      }
-      &__text {
-        padding-top: 10px;
-
-      }
-    }
-  }
-
-  &__footer {
-    height: 90px;
-    background-color: $grey;
-    padding: 20px 40px;
-    .message {
-      height: 100%;
-      &__text {
-        height: 100%;
-        padding-left: 10px;
-        width: calc(100% - 170px);
-        border: none;
-        float: left;
-      }
-      &__file {
-        background-color: $white;
-        height: 100%;
-        padding: 15px 15px 0 10px;
-        box-sizing: border-box;
-        float: left;
-      }
-      &__submit {
-        height: 100%;
-        background-color: $light-blue;
-        color: $white;
-        border: none;
-        padding: 0 30px;
-        float: right;
-
-      }
-    }
-  }
-
-}
