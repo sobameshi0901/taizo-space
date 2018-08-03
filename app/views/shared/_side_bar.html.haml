@@ -14,4 +14,4 @@
           .group-content
             = link_to group_messages_path(group) do
               %p.group-content__name=group.name
-              %p.group-content__text 解散！
+              %p.group-content__text= group.show_last_message
