@@ -32,9 +32,13 @@
     overflow: scroll;
     background-color: $navy;
     .group-contents {
+        text-decoration: none;
       .group-content {
-        color: $white;
-        padding: 0 20px;
+         padding:  0 20px;
+        a{
+          color: $white;
+          text-decoration: none;
+        }
         &:hover {
           background: #435162;
         }
