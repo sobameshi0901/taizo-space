@@ -8,41 +8,7 @@
         %p.group-info__detail__member MEMBER: シューゾー、タイゾー、シンゾー
     = link_to 'edit','/', class: 'group-info__button'
   .chat-main__body
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
-    .post
-      %ul.post__detail.clearfix
-        %li.post__detail__user タイゾー
-        %li.post__detail__time 2018/07/26 14:13:32
-      .post__text 解散しますか？
+    =render @messages
   .chat-main__footer
     = form_for [@group, @message] do |f|
       .message

@@ -1,0 +1,6 @@
+.post
+  %ul.post__detail.clearfix
+    %li.post__detail__user= message.user.name
+    %li.post__detail__time= message.created_at
+  .post__text= message.content
+  =image_tag message.image.url if message.image.present?
