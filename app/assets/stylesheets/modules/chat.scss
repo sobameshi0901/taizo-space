@@ -67,30 +67,33 @@
     height: 90px;
     background-color: $grey;
     padding: 20px 40px;
-    .message {
+    .new_message {
       height: 100%;
-      &__text {
+      .message {
         height: 100%;
-        padding-left: 10px;
-        width: calc(100% - 170px);
-        border: none;
-        float: left;
-      }
-      &__file {
-        background-color: $white;
-        height: 100%;
-        padding: 15px 15px 0 10px;
-        box-sizing: border-box;
-        float: left;
-      }
-      &__submit {
-        height: 100%;
-        background-color: $light-blue;
-        color: $white;
-        border: none;
-        padding: 0 30px;
-        float: right;
+        &__text {
+          height: 100%;
+          padding-left: 10px;
+          width: calc(100% - 170px);
+          border: none;
+          float: left;
+        }
+        &__file {
+          background-color: $white;
+          height: 100%;
+          padding: 15px 15px 0 10px;
+          box-sizing: border-box;
+          float: left;
+        }
+        &__submit {
+          height: 100%;
+          background-color: $light-blue;
+          color: $white;
+          border: none;
+          padding: 0 30px;
+          float: right;
 
+        }
       }
     }
   }

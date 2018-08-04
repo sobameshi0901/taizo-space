@@ -12,5 +12,6 @@
       .group-contents
         - current_user.groups.each do |group|
           .group-content
-            %p.group-content__name=group.name
-            %p.group-content__text 解散！
+            = link_to group_messages_path(group) do
+              %p.group-content__name=group.name
+              %p.group-content__text= group.show_last_message
