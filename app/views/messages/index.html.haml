@@ -4,8 +4,8 @@
   .chat-main__header
     .group-info
       .group-info__detail
-        %h3.group-info__detail__name シューゾーの会
-        %p.group-info__detail__member MEMBER: シューゾー、タイゾー、シンゾー
+        %h3.group-info__detail__name=@group.name
+        %p.group-info__detail__member= "MEMBER: #{@group.users.map{|user| user.name}.join("、")}"
     = link_to 'edit','/', class: 'group-info__button'
   .chat-main__body
     =render @messages
