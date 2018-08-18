@@ -10,11 +10,6 @@ $(document).on('turbolinks:load', function() {
     search_list.append(html);
     }
 
-    function appendNoUser(user) {
-      var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
-    <p class='chat-group-user__name'>${user}</p>
-  </div>`
-    }
 
     function appendUserGroup(userId, userName) {
       var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${userId}'>
@@ -35,16 +30,12 @@ $(document).on('turbolinks:load', function() {
       dataType: 'json'
     })
     .done(function(users) {
-      console.log(users);
       $('.user-search-result').empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
           appendUser(user);
         });
       }
-        else {
-          appendNoUser('一致するユーザーは存在しません');
-        }
       })
     .fail(function() {
       alert('ユーザー検索に失敗しました');
