@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function() {
       var image = message.image ?  `<img src="${message.image}">` : ""
 
       var html = `
-        <div class="post">
+        <div class="post" data-id="${message.id}">
           <ul class="post__detail claerfix">
             <li class="post__detail__user">
               ${message.user_name}
@@ -20,6 +20,33 @@ $(document).on('turbolinks:load', function() {
           ${image}
         </div>`
         return html;
+    }
+
+
+    function autoUpdate() {
+      var messageId = $(".post").last().data('id');
+      $.ajax({
+        url: window.location.href,
+        type: "GET",
+        data: {message_id: messageId},
+        dataType: 'json',
+      })
+      .done(function(messages) {
+        if (messages.length !== 0) {
+          messages.forEach(function(message){
+            var html = buildHTML(message)
+           $('.chat-main__body').append(html);
+          })
+          $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
+        }
+      })
+      .fail(function(){
+        alert('更新に失敗しました。')
+      })
+    }
+
+    function scrollToBottom(){
+      $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
     }
 
     $('#new_message').on('submit',function(e) {    
@@ -41,12 +68,19 @@ $(document).on('turbolinks:load', function() {
         $('.chat-main__body').append(html);
         $('#message_content').val('');
         $('#message_image').val('');
-        $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
+        scrollToBottom()
 
       })
       .fail(function() {
         alert('error');
       })
     })
+
+
+    setInterval(function() {
+      if (document.URL.match("/groups/.*/messages")){
+      autoUpdate();
+      }
+    }, 5000)
   });
 });
