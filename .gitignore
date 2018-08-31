@@ -26,4 +26,5 @@
 /config/master.key
 
 public/uploads/*
+
 /config/credentials.yml.enc
