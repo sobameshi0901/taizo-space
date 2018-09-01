@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: taizo-space_production
-  username: taizo-space
-  password: <%= ENV['TAIZO-SPACE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
